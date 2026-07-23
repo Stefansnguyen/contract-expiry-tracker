@@ -262,8 +262,9 @@ else:
 
     subject, body = build_email_draft(selected_row)
 
-    st.text_input("Ämnesrad", value=subject, key="email_subject")
-    st.text_area("Meddelande", value=body, height=280, key="email_body")
+    contract_key = f"{selected_row['Vendor']}_{selected_row['End Date'].strftime('%Y-%m-%d')}"
+    st.text_input("Ämnesrad", value=subject, key=f"email_subject_{contract_key}")
+    st.text_area("Meddelande", value=body, height=280, key=f"email_body_{contract_key}")
 
     st.caption("Kopiera texten ovan till ditt mailprogram, eller ladda ner som textfil.")
     st.download_button(
