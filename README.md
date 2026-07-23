@@ -1,7 +1,7 @@
 # Contract Expiry Tracker
 
 A lightweight procurement tool that flags vendor contracts approaching expiry and generates
-ready-to-send reminder emails — built to reduce missed renewal/renegotiation deadlines,
+ready-to-send reminder emails, built to reduce missed renewal/renegotiation deadlines,
 a common gap in manual contract management.
 
 > **Note:** This is a portfolio project built against mock data for demonstration purposes.
@@ -9,7 +9,7 @@ a common gap in manual contract management.
 
 ## Why this exists
 
-Missed contract renewal windows are a recurring, avoidable problem in procurement —
+Missed contract renewal windows are a recurring, avoidable problem in procurement:
 contracts auto-renew on unfavorable terms, or lapse entirely, simply because no one
 was tracking the expiry date. This tool gives a quick, visual answer to
 "what needs my attention this month?" and removes the manual step of drafting a

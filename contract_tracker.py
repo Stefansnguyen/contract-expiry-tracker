@@ -136,7 +136,7 @@ Inköp / Avtalsuppföljning"""
 # UI
 # ----------------------------
 st.title("📋 Contract Expiry Tracker")
-st.caption("Portfolio-demo — körs mot mockdata. Ladda upp egen CSV eller använd genererad exempeldata.")
+st.caption("Portfolio-demo, körs mot mockdata. Ladda upp egen CSV eller använd genererad exempeldata.")
 
 with st.expander("Hur funkar det?", expanded=False):
     st.markdown("""
@@ -253,7 +253,7 @@ if len(filtered) == 0:
     st.warning("Inga kontrakt matchar filtren.")
 else:
     options = [
-        f"{row['Vendor']} — {row['Contract Type']} (går ut {row['End Date'].strftime('%Y-%m-%d')})"
+        f"{row['Vendor']} - {row['Contract Type']} (går ut {row['End Date'].strftime('%Y-%m-%d')})"
         for _, row in filtered.iterrows()
     ]
     choice = st.selectbox("Välj kontrakt", options)
