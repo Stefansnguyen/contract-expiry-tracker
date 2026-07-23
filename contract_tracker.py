@@ -232,7 +232,7 @@ display_df = filtered[["Vendor", "Contract Type", "End Date", "Days Left", "Urge
 display_df["End Date"] = display_df["End Date"].dt.strftime("%Y-%m-%d")
 
 st.dataframe(
-    display_df.style.applymap(style_urgency, subset=["Urgency"]),
+    display_df.style.map(style_urgency, subset=["Urgency"]),
     use_container_width=True,
     hide_index=True,
 )
