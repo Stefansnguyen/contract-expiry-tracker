@@ -267,19 +267,8 @@ else:
     edited_subject = st.text_input("Ämnesrad", value=subject, key=f"email_subject_{contract_key}")
     edited_body = st.text_area("Meddelande", value=body, height=280, key=f"email_body_{contract_key}")
 
-    st.caption("Kopiera texten ovan till ditt mailprogram, eller ladda ner som textfil.")
+    st.caption("Kopiera texten ovan till ditt mailprogram.")
 
-    col1, col2 = st.columns(2)
-    with col1:
-        st.download_button(
-            "⬇️ Ladda ner mailutkast (.txt)",
-            f"Ämne: {edited_subject}\n\n{edited_body}",
-            "reminder_draft.txt",
-            "text/plain",
-        )
-    with col2:
-        mailto_url = (
-            f"mailto:?subject={quote(edited_subject)}&body={quote(edited_body)}"
-        )
-        st.link_button("📧 Öppna i mailprogram", mailto_url)
+    mailto_url = f"mailto:?subject={quote(edited_subject)}&body={quote(edited_body)}"
+    st.link_button("📧 Öppna i mailprogram", mailto_url)
     st.caption("Öppnar ditt standardmailprogram med färdigifyllt utkast — inget skickas automatiskt.")
